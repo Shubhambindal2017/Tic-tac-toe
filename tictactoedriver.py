@@ -15,9 +15,9 @@ while(1):
         print ("\t\t %s YOUR TURN") % player1
     if(count==1):
         print("\t\t %s YOUR TURN") % player2
-    row=int(raw_input("\t\t ROW     :  "))
-    column=int(raw_input("\t\t COLUMN  :  "))
-    board.move(row,column,count)
+    index=int(raw_input("\t\t Place     :  "))
+    index = board.input_to_index(index)
+    board.move(index,count)
     board.display()
     a=board.result()
     if(a==1):
